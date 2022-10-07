@@ -1,5 +1,5 @@
 # 1
-'''
+
 def days():
     num = int(input("Enter the Number : "))
     years = num//365
@@ -7,10 +7,10 @@ def days():
     days = (num-years*365-months*30)
     print(years," Year ",months," Months ",days," Days ")
 days()
-'''
+
 
 # 2
-'''
+
 def fib():
     a=1
     b=1
@@ -21,10 +21,10 @@ def fib():
         b=c
 print("Fibonacci Series") 
 fib()
-'''
+
 
 # 3
-'''
+
 player1 = input("Enter Player name 1 :")
 player2 = input("Enter Player name 2 :")
 s=[]
@@ -47,10 +47,10 @@ elif ((s[0]=='P' and s[1]=='P') or (s[0]=='S' and s[1]=='S') or (s[0]=='R' and s
     print("Tie")
 else :
     print("Invalid")
-'''
+
 
 # 4
-'''
+
 def allowance():
     total=(22/100)*amount+(18/100)*amount+(10/100)*amount
     return total
@@ -78,10 +78,10 @@ b=deduction()
 print(" GrossSalary : ",gross(a))
 c=gross(a)
 print(" NetSalary : ",netsalary(c))
-'''
+
 
 # 5
-'''
+
 str2 = "Python is a widely used general-purpose, high level programming language. \nIt was created by Guido van Rossum in 1991 and further developed by the Python Software Foundation.\n It was designed with an emphasis on code readability,\n and its syntax allows programmers to express their concepts in fewer lines of code"
 str1=str2.upper()
 c1=0
@@ -93,10 +93,10 @@ for i in range(len(str1)):
         c2=c2+1
 print("No of vowels : ",c1)
 print("No of constraints : ",c2)
-'''
+
 
 # 6
-'''
+
 str1 = input("Enter the string : ")
 str2 = str1.upper()
 str3 = str2[::-1]
@@ -107,19 +107,19 @@ for i in range(len(str2)):
     else:
         print("Pallindrome ")
         break
-'''
+
 
 # 7
-'''
+
 str1 = input("Enter the Email ID : ")
 if (str1[0]!='@' and str1[0]!='.') and (str1[:1]!='@' and str1[:1]!='.') and (str1.count('@')==1) and (str1.count('.')==1):
     print(str1,"is Valid ")
 else:
     print(str1,"is InValid ")
-'''
+
 
 # 8
-'''
+
 def hotel_cost(night):
     return 140*night
 
@@ -153,10 +153,10 @@ city = c.lower()
 days = int(input("Enter the no. of days : "))
 spending_money = int(input("Enter the amount : "))
 trip_cost(city,days,spending_money)
-'''
+
 
 # 9
-'''
+
 def viewBakery():
     for i in bakery_items:
         print(i,'-','Rs',bakery_items[i])
@@ -215,7 +215,7 @@ def checkOut():
     print("item \t","cost")
     cost=0
     for item in cart:
-          print(item,"\t",cart[item]*bakery_items[item],"\n")
+          print(item,"\t",cart[item]*bakery_items[item])
           cost=cost+cart[item]*bakery_items[item]
     print("Total cost:",cost)
 
@@ -249,5 +249,5 @@ while(flag==True):
     elif(choice==6):
         checkOut()
         print()
-        flag=1
-'''
+        flag=False
+
