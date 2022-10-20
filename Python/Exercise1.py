@@ -39,7 +39,7 @@ if __name__ == "__main__":
         print(item)
         
     # 2. 
-    print("\nTop hired employee is from which education fields: ")
+    print("Top hired employee is from which education fields: ")
     allDocuments = collection.aggregate([
         {'$group':{'_id' : '$EducationField', 'total_counts':{'$count':{}}}},
         {'$sort' : {'total_counts':-1}},
@@ -57,7 +57,7 @@ if __name__ == "__main__":
    
     
     # 4. 
-    print('\nFind the AVG Monthly Income of overall employee : ')
+    print('Find the AVG Monthly Income of overall employee : ')
     avgincome = collection.aggregate([
         {'$group' : {'_id' : 'null', 'avg salary':{ '$avg' : '$MonthlyIncome'}}}, 
                     {'$project' : {'_id' : 0}}])
@@ -67,7 +67,7 @@ if __name__ == "__main__":
         print(item)
         
     # 5. 
-    print('\nFind the AVG PercentSalaryHike of employee : ')
+    print('Find the AVG PercentSalaryHike of employee : ')
     avgincome = collection.aggregate([
         {'$group' : {'_id' : 'null', 'avgsalary_hike':{ '$avg' : '$PercentSalaryHike'}}}, 
                     {'$project' : {'_id' : 0}}])
@@ -87,7 +87,7 @@ if __name__ == "__main__":
         print(item)
     
     # 7. 
-    print('\nHighest attrition is in which department : ')
+    print('Highest attrition is in which department : ')
     Dept_attrition = collection.aggregate([
         {'$match' : {'Attrition':"Yes"}},
         {'$group':{'_id' : '$Department', 'total_counts':{'$count':{}}}},
